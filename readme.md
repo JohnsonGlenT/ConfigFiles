@@ -116,6 +116,11 @@ Personal  Config Files - Feel free to use
 
 - Linked to by Rofi config file, Sidebar inspired theme with slight edits
 
+---
 
+## Xfce4
+
+- Config Files for xfce4
 
 ---
+
