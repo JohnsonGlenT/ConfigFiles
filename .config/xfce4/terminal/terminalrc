@@ -7,7 +7,7 @@ MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
-MiscMenubarDefault=TRUE
+MiscMenubarDefault=FALSE
 MiscMouseAutohide=TRUE
 MiscMouseWheelZoom=TRUE
 MiscToolbarDefault=FALSE
@@ -30,4 +30,6 @@ ScrollingUnlimited=TRUE
 FontName=Roboto Mono 11
 ShortcutsNoMenukey=TRUE
 ShortcutsNoMnemonics=TRUE
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+BackgroundDarkness=0.750000
 
