@@ -115,6 +115,7 @@ fi
 alias ll='ls -l '
 alias la='ls -A '
 alias l='ls -CF '
+alias nano'nano -S '
 alias em='emacs -nw '
 alias dd='dd status=progress '
 alias _='sudo '

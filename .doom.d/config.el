@@ -7,6 +7,7 @@
 ;; clients, file templates and snippets.
 (setq user-full-name "Glen Johnson"
       user-mail-address "Johnson.Glen.T@outlook.com")
+
 ;; Font Settings
 (setq doom-font (font-spec :family "Roboto Mono" :size 12)
       doom-variable-pitch-font (font-spec :family "Roboto Mono" :size 12)
@@ -24,15 +25,18 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
-(setq indent-tabs-mode t)
 (setq-default tab-width 4)
+
 ;; Set Ispell Dictionary
 (setq ispell-dictionary "en")
+
 ;; Mini Map
 ;; (minimap-mode)
+
+;; Comment Keybinds
 (map! :leader
-     :desc "Comment Area"
-     "a" #'comment-region)
-(map! :leader
+      (:prefix-map ("a" . "Comments"))
+      :desc "Comment Area"
+      "a a" #'comment-region
       :desc "Uncomment Area"
-      "d" #'uncomment-region)
+      "a d" #'uncomment-region)

@@ -102,9 +102,6 @@ set linenumbers
 ## Do not automatically hard-wrap text.
 set nowrap
 
-## Use line-by-line scrolling instead of chunk-by-chunk.
-set smooth
-
 ## Allow nano to be suspended.
 # set suspend
 
