@@ -1,6 +1,14 @@
 # READ ME - config files
 - Back Up any config file before replacing
 - Personal  Config Files - Feel free to use
+# Installation guide 
+- Installation
+      git clone https://github.com/johnsonglent/configfiles ~/.dotfiles
+      cd ~/.dotfiles
+      stow .
+- to update use the update script
+      cd ~/.dotfiles
+      ./update.sh
 ## Text Editors
 #### Nanorc
 - add nanorc to ~/.nanorc
