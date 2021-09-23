@@ -1,6 +1,6 @@
 # READ ME - config files
-Back Up any config file before replacing
-Personal  Config Files - Feel free to use
+- Back Up any config file before replacing
+- Personal  Config Files - Feel free to use
 ## Text Editors
 #### Nanorc
 - add nanorc to ~/.nanorc
@@ -24,8 +24,8 @@ Personal  Config Files - Feel free to use
   - Fortune
 - start with conky -c ~/$LOCATION/conky-fortune.conkyrc
 #### Conky Start
-* execute to launch conky fortune and conky spotify
-* Edit paths to reflect conky placements accordingly
+- execute to launch conky fortune and conky spotify
+- Edit paths to reflect conky placements accordingly
 ## Shell Files
 #### BASHRC File
 - Add to ~/.bashrc
