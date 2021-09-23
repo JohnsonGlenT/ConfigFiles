@@ -1,8 +1,8 @@
 configuration {
     modi: "window,run,ssh,drun,combi";
     theme: "./theme";
-    font: "Fira Mono Nerd Font 14";
+    font: "Roboto Mono 14";
     combi-modi: "window,drun,ssh";
     show-icons: true;
-    icon-theme: "papirus-dark";
+    icon-theme: "Papirus-Dark";
 }
