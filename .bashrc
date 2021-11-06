@@ -9,7 +9,7 @@ case $- in
 esac
 
 PROMPT_DIRTRIM=3
-export PATH=PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:~/local/bin
+export PATH=PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:~/.local/bin
 
 # Import Secrets Variables
 SECRETS=~/.bash_secrets
@@ -19,6 +19,7 @@ if [ -f $SECRETS ]; then
         export $LINE
     done
 fi
+
 # don't put duplidcate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -58,12 +59,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -75,17 +76,17 @@ fi
 
 # Set 'man' colors
 if [ "$color_prompt" = yes ]; then
-	man() {
-	env \
-	LESS_TERMCAP_mb=$'\e[01;31m' \
-	LESS_TERMCAP_md=$'\e[01;31m' \
-	LESS_TERMCAP_me=$'\e[0m' \
-	LESS_TERMCAP_se=$'\e[0m' \
-	LESS_TERMCAP_so=$'\e[01;44;33m' \
-	LESS_TERMCAP_ue=$'\e[0m' \
-	LESS_TERMCAP_us=$'\e[01;32m' \
-	man "$@"
-	}
+    man() {
+    env \
+    LESS_TERMCAP_mb=$'\e[01;31m' \
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    man "$@"
+    }
 fi
 
 unset color_prompt force_color_prompt
@@ -111,15 +112,19 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto '
 fi
 
-# some more ls aliases
+# some more aliases
 alias ll='ls -l '
 alias la='ls -A '
 alias l='ls -CF '
 alias nano='nano -S '
-alias em='emacs -nw '
+alias em='emacsclient -c'
+alias emacs='emacsclient -c'
 alias dd='dd status=progress '
 alias _='sudo '
 alias _i='sudo -i '
+
+# some exports
+export RUST_SRC_PATH=/home/johnson/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

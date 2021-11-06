@@ -40,3 +40,6 @@
       "a a" #'comment-region
       :desc "Uncomment Area"
       "a d" #'uncomment-region)
+
+;; set fullscreen on start
+(toggle-frame-maximized)
