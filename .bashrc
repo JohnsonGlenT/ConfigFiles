@@ -116,6 +116,7 @@ fi
 alias ll='ls -l '
 alias la='ls -A '
 alias l='ls -CF '
+alias py='python'
 alias nano='nano -S '
 alias em='emacsclient -c'
 alias emacs='emacsclient -c'

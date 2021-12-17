@@ -1,5 +1,5 @@
 favorites=vivaldi-stable.desktop,emacs.desktop,xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop
-recent=emacs.desktop,librewolf.desktop,vivaldi-stable.desktop,stacer-bin.desktop,xfce4-file-manager.desktop,teams-for-linux.desktop,org.xfce.mousepad.desktop,xfce4-notes.desktop,thunar.desktop,system-config-printer.desktop
+recent=librewolf.desktop,emacs.desktop,vivaldi-stable.desktop,xfce4-session-logout.desktop,xfce4-file-manager.desktop,xfce4-terminal-emulator.desktop,fr.handbrake.ghb.desktop,org.gnome.Cheese.desktop,org.xfce.mousepad.desktop
 button-title=pplications
 button-icon=artixlinux-logo
 button-single-row=false
