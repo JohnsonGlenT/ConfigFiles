@@ -16,6 +16,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+(setq doom-molokai-brighter-comments t)
 (setq doom-theme 'doom-molokai)
 
 ;; If you use `org' and don't want your org files in the default location below,
@@ -26,9 +27,11 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 (setq-default tab-width 4)
+(setq tab-width 4)
 
 ;; Set Ispell Dictionary
 (setq ispell-dictionary "en")
+
 
 ;; Mini Map
 ;; (minimap-mode)
