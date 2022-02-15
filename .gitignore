@@ -5,6 +5,10 @@ tmp/
 
 # XFCE Files that are better managed through local settings
 .config/xfce4/desktop
+.config/xfce4/help.rc
+.config/xfce4/helpers.rc
+.config/xfce4/xfce4-notes.rc
+.config/xfce4/xfce4-notes.css
 .config/xfce4/xfconf/xfce-perchannel-xml/displays.xml
 .config/xfce4/xfconf/xfce-perchannel-xml/pointers.xml
 .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
