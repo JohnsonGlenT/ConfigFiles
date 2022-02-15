@@ -16,7 +16,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-molokai-brighter-comments t)
+(setq doom-molokai-brighter-comments `t)
 (setq doom-theme 'doom-molokai)
 
 ;; If you use `org' and don't want your org files in the default location below,
@@ -25,7 +25,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type `relative)
 (setq-default tab-width 4)
 (setq tab-width 4)
 
@@ -38,11 +38,12 @@
 
 ;; Comment Keybinds
 (map! :leader
-      (:prefix-map ("a" . "Comments"))
+      (:prefix-map ("a" . "Custom Binds"))
       :desc "Comment Area"
       "a a" #'comment-region
       :desc "Uncomment Area"
-      "a d" #'uncomment-region)
-
-;; set fullscreen on start
-(toggle-frame-maximized)
+      "a d" #'uncomment-region
+      :desc "Increment Number"
+      "a w" #'evil-numbers/inc-at-pt-incremental
+      :desc "Decrement Number"
+      "a s" #'evil-numbers/dec-at-pt-incremental)

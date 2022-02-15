@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+*.log
+tmp/
+
+# XFCE Files that are better managed through local settings
+.config/xfce4/desktop
+.config/xfce4/xfconf/xfce-perchannel-xml/displays.xml
+.config/xfce4/xfconf/xfce-perchannel-xml/pointers.xml
+.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-appfinder.xml
+.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-screensaver.xml

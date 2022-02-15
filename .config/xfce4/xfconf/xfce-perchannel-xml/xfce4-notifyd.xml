@@ -23,6 +23,6 @@
     </property>
   </property>
   <property name="notification-log" type="bool" value="true"/>
-  <property name="do-not-disturb" type="bool" value="false"/>
+  <property name="do-not-disturb" type="bool" value="true"/>
   <property name="do-slideout" type="bool" value="true"/>
 </channel>
