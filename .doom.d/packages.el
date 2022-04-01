@@ -40,19 +40,14 @@
 ;; Use `:pin' to specify a particular commit to install.
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
+(package! beacon)
+
 (package! power-mode
   :recipe (:host github :repo "elizagamedev/power-mode.el"
            :files ("power-mode.el" "*.el")))
-
 ;(package! this-package
 ;  :recipe (:host github :repo "username/repo"
 ;           :files ("some-file.el" "src/lisp/*.el")))
-
-;; TODO add power-mode package
-;; (use-package power-mode
-;;  :load-path "~/.emacs.d/modules/ui/power-mode/power-mode.el"
-;;  :init
-;;  (add-hook 'after-init-hook #'power-mode))
 
 ;; Doom's packages are pinned to a specific commit and updated from release to
 ;; release. The `unpin!' macro allows you to unpin single packages...

@@ -1,5 +1,5 @@
 favorites=vivaldi-stable.desktop,emacs.desktop,xfce4-terminal-emulator.desktop,xfce4-file-manager.desktop
-recent=librewolf.desktop,vmware-view.desktop,firefox.desktop,vivaldi-stable.desktop,teams.desktop,discord.desktop,xfce4-session-logout.desktop,emacs.desktop,xfce4-file-manager.desktop,geany.desktop
+recent=thunar.desktop,xfce4-file-manager.desktop,vivaldi-stable.desktop,librewolf.desktop,xfce4-session-logout.desktop,discord.desktop,eclipse.desktop,org.xfce.mousepad.desktop,emacs.desktop,luyten.desktop
 button-title=pplications
 button-icon=artixlinux-logo
 button-single-row=false
@@ -24,8 +24,8 @@ position-categories-horizontal=false
 stay-on-focus-out=false
 profile-shape=0
 confirm-session-command=true
-menu-width=533
-menu-height=627
+menu-width=531
+menu-height=624
 menu-opacity=100
 command-settings=xfce4-settings-manager
 show-command-settings=true

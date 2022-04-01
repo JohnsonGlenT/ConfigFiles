@@ -28,7 +28,4 @@
       <property name="Client4_PerScreen" type="empty"/>
     </property>
   </property>
-  <property name="shutdown" type="empty">
-    <property name="LockScreen" type="bool" value="true"/>
-  </property>
 </channel>

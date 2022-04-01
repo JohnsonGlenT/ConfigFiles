@@ -4,5 +4,6 @@ configuration {
     combi-modi: "window,drun,ssh";
     show-icons: true;
     icon-theme: "Papirus-Dark";
+    terminal: "xfce4-terminal";
 }
 @theme "./theme"

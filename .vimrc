@@ -1,9 +1,8 @@
 set nocompatible
-filetype off
+filetype on
 
 syntax on
 
-set nowrap
 set formatoptions-=t
 
 set tabstop=4

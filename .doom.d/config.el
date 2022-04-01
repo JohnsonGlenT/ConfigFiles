@@ -23,18 +23,18 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/Org/")
 
+;; Set Ispell Dictionary
+(setq ispell-dictionary "en")
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
 (setq-default tab-width 4)
 (setq tab-width 4)
 
-;; Set Ispell Dictionary
-(setq ispell-dictionary "en")
-
-
-;; Mini Map
+;; Enable Modes
 ;; (minimap-mode)
+(beacon-mode)
 
 ;; Comment Keybinds
 (map! :leader
