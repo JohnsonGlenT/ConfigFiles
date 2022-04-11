@@ -9,15 +9,16 @@
       user-mail-address "Johnson.Glen.T@outlook.com")
 
 ;; Font Settings
-(setq doom-font (font-spec :family "Roboto Mono" :size 12)
+(setq doom-font (font-spec :family "Roboto Mono" :size 13)
       doom-variable-pitch-font (font-spec :family "Roboto Mono" :size 12)
       doom-big-font (font-spec :family "Roboto Mono" :size 18))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-molokai-brighter-comments `t)
-(setq doom-theme 'doom-molokai)
+(setq doom-old-hope-brighter-comments `t)
+(setq doom-old-hope-comment-bg `t)
+(setq doom-theme 'doom-old-hope)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!

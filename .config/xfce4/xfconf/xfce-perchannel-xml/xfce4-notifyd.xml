@@ -7,9 +7,12 @@
   <property name="log-level-apps" type="uint" value="2"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="bleachbit"/>
       <value type="string" value="blueman"/>
+      <value type="string" value="brave-browser"/>
       <value type="string" value="discord"/>
       <value type="string" value="fr.handbrake.ghb"/>
+      <value type="string" value="itch"/>
       <value type="string" value="org.kde.kdeconnect.daemon"/>
       <value type="string" value="Spotify"/>
       <value type="string" value="teams"/>
@@ -23,6 +26,6 @@
     </property>
   </property>
   <property name="notification-log" type="bool" value="true"/>
-  <property name="do-not-disturb" type="bool" value="true"/>
+  <property name="do-not-disturb" type="bool" value="false"/>
   <property name="do-slideout" type="bool" value="true"/>
 </channel>

@@ -1,6 +1,9 @@
 set nocompatible
 filetype on
 
+set background=dark
+colorscheme PaperColor
+
 syntax on
 
 set formatoptions-=t

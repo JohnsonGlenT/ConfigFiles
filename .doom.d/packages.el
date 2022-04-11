@@ -41,10 +41,15 @@
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
 (package! beacon)
+(package! mips-mode)
+(package! riscv-mode)
+(package! org-sidebar)
+(package! lorem-ipsum)
+(package! ssh-tunnels)
+(package! lsp-javacomp)
+(package! gitlab-ci-mode)
+(package! gitlab-ci-mode-flycheck)
 
-(package! power-mode
-  :recipe (:host github :repo "elizagamedev/power-mode.el"
-           :files ("power-mode.el" "*.el")))
 ;(package! this-package
 ;  :recipe (:host github :repo "username/repo"
 ;           :files ("some-file.el" "src/lisp/*.el")))
