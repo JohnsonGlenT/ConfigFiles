@@ -1,20 +1,21 @@
 conky.config = {
     background = true,
-    -- font = 'Fira Code Nerd:size=32',
+    font = 'Roboto Mono:size=14',
     uppercase = false,
     override_utf8_locale = true,
     default_color = 'white',
 
     alignment = 'bottom_left',
-    gap_x = 140,
+    gap_x = 35,
     gap_y = 50,
     minimum_width = 850,
     maximum_width = 850,
 
     own_window = true,
     own_window_type = 'desktop',
+    own_window_transparent = false,
     own_window_argb_visual = true,
-    own_window_transparent = true,
+    own_window_argb_value = 150,
     own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 
     double_buffer = true,
@@ -33,6 +34,6 @@ conky.config = {
 };
 
 conky.text = [[
-    # --- Print Fortune
-    ${font}${exec fortune -s}
+# --- Print Fortune
+${font}${exec fortune -s}
 ]]

@@ -16,9 +16,12 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-old-hope-brighter-comments `t)
-(setq doom-old-hope-comment-bg `t)
+(setq doom-old-hope-padded-modeline 't)
 (setq doom-theme 'doom-old-hope)
+;; brighter comments are done by changing
+;; (comments        base5)
+;; in ~/.emacs.d/.local/straight/repos/themes/doom-old-hope-theme.el to
+;; (comments       (doom-lighten base6 0.2))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
