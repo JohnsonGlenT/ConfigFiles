@@ -41,6 +41,7 @@
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
 (package! beacon)
+<<<<<<< Updated upstream
 (package! mips-mode)
 (package! riscv-mode)
 (package! org-sidebar)
@@ -49,6 +50,9 @@
 (package! lsp-javacomp)
 (package! gitlab-ci-mode)
 (package! gitlab-ci-mode-flycheck)
+=======
+(package! 2048-game)
+>>>>>>> Stashed changes
 
 ;(package! this-package
 ;  :recipe (:host github :repo "username/repo"
