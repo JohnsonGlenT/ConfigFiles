@@ -41,20 +41,30 @@
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
 (package! beacon)
+(package! htmlize)
+
 (package! mips-mode)
+(package! bison-mode)
 (package! riscv-mode)
+
+(package! org-ac)
 (package! org-sidebar)
-(package! lorem-ipsum)
+(package! org-transclusion)
+(package! org-inline-pdf)
+
+(package! pdf-view-restore)
 (package! ssh-tunnels)
-(package! lsp-javacomp)
+
 (package! gitlab-ci-mode)
 (package! gitlab-ci-mode-flycheck)
+
+(package! crossword)
 
 ;(package! this-package
 ;  :recipe (:host github :repo "username/repo"
 ;           :files ("some-file.el" "src/lisp/*.el")))
 
-;; Doom's packages are pinned to a specific commit and updated from release to
+;; Doom's packages are pinne d to a specific commit and updated from release to
 ;; release. The `unpin!' macro allows you to unpin single packages...
 ;(unpin! pinned-package)
 ;; ...or multiple packages

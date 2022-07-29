@@ -21,6 +21,16 @@ if [ -f $SECRETS ]; then
     done
 fi
 
+# some exports
+export RUST_SRC_PATH=/home/johnson/.rustup/toolchains/stable-x86_64-unknown-linux-gnu
+
+# check if local bin folder exist
+# $HOME/bin
+# prepend it to $PATH if so
+if [ -d $HOME/bin ]; then
+    export PATH=$HOME/bin:$PATH
+fi
+
 # don't put duplidcate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -120,13 +130,11 @@ alias l='ls -CF '
 alias py='python'
 alias nano='nano -S '
 alias em='emacsclient -c'
-alias emacs='emacsclient -c'
 alias dd='dd status=progress '
 alias _='sudo '
 alias _i='sudo -i '
+alias yay='yay --noredownload --norebuild --sudoloop'
 
-# some exports
-export RUST_SRC_PATH=/home/johnson/.rustup/toolchains/stable-x86_64-unknown-linux-gnu
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -148,9 +156,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# check if local bin folder exist
-# $HOME/bin
-# prepend it to $PATH if so
-if [ -d $HOME/bin ]; then
-    export PATH=$HOME/bin:$PATH
-fi
