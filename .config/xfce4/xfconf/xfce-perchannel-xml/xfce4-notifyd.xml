@@ -13,7 +13,9 @@
       <value type="string" value="discord"/>
       <value type="string" value="fr.handbrake.ghb"/>
       <value type="string" value="itch"/>
+      <value type="string" value="kitch"/>
       <value type="string" value="org.kde.kdeconnect.daemon"/>
+      <value type="string" value="org.xfce.Thunar"/>
       <value type="string" value="Spotify"/>
       <value type="string" value="teams"/>
       <value type="string" value="teams-for-linux"/>
