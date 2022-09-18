@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
-      *) return;;
+    *) return ;;
 esac
 
 PROMPT_DIRTRIM=3
@@ -17,7 +17,7 @@ SECRETS=~/.bash_secrets
 if [ -f $SECRETS ]; then
     LINES=$(cat $SECRETS)
     for LINE in $LINES; do
-        export $LINE
+        export "${LINE?}"
     done
 fi
 
@@ -50,7 +50,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color) color_prompt=yes ;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -72,21 +72,21 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1="\[\033[0;31m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;31m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]root\[\033[01;33m\]@\[\033[01;96m\]\h'; else echo '\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h'; fi)\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\\$\[\e[0m\]"
 else
-    PS1='[\u@\h]─[\w]$ '
+    PS1="[\u@\h]-[\w]$ "
 fi
 
 # Set 'man' colors
 if [ "$color_prompt" = yes ]; then
     man() {
-    env \
-    LESS_TERMCAP_mb=$'\e[01;31m' \
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    man "$@"
+        env \
+            LESS_TERMCAP_mb=$'\e[01;31m' \
+            LESS_TERMCAP_md=$'\e[01;31m' \
+            LESS_TERMCAP_me=$'\e[0m' \
+            LESS_TERMCAP_se=$'\e[0m' \
+            LESS_TERMCAP_so=$'\e[01;44;33m' \
+            LESS_TERMCAP_ue=$'\e[0m' \
+            LESS_TERMCAP_us=$'\e[01;32m' \
+            man "$@"
     }
 fi
 
@@ -94,11 +94,11 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\033[0;31m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]root\[\033[01;33m\]@\[\033[01;96m\]\h'; else echo '\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h'; fi)\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\\$\[\e[0m\]"
-    ;;
-*)
-    ;;
+    xterm* | rxvt*)
+        PS1="\[\033[0;31m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]root\[\033[01;33m\]@\[\033[01;96m\]\h'; else echo '\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h'; fi)\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\\$\[\e[0m\]"
+        ;;
+    *) ;;
+
 esac
 
 # enable color support of ls and also add handy aliases
@@ -141,16 +141,16 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 # check if local bin folder exist
 # $HOME/bin
 # prepend it to $PATH if so
-if [ -d $HOME/bin ]; then
+if [ -d "$HOME/bin" ]; then
     export PATH=$HOME/bin:$PATH
 fi

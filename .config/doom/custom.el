@@ -15,7 +15,7 @@
  '(jdee-db-spec-breakpoint-face-colors (cons "#1B2229" "#525254"))
  '(objed-cursor-color "#E74C3C")
  '(package-selected-packages
-   '(poker gameoflife 2048-game org-books plain-org-wiki saveplace-pdf-view systemd beacon flymake-css ewal-doom-themes pdf-tools org-plus-contrib treemacs-magit zimports fsm soar-mode srefactor arduino-cli-mode arduino-mode lorem-ipsum define-word dictionary helpful wc-mode lsp-javacomp flymake-ktlint rtags cucumber-goto-step gherkin-mode))
+   '(lsp-pyright poker gameoflife 2048-game org-books plain-org-wiki saveplace-pdf-view systemd beacon flymake-css ewal-doom-themes pdf-tools org-plus-contrib treemacs-magit zimports fsm soar-mode srefactor arduino-cli-mode arduino-mode lorem-ipsum define-word dictionary helpful wc-mode lsp-javacomp flymake-ktlint rtags cucumber-goto-step gherkin-mode))
  '(pdf-view-midnight-colors (cons "#F8F8F2" "#272822"))
  '(rustic-ansi-faces
    ["#272822" "#E74C3C" "#A6E22E" "#E6DB74" "#268bd2" "#F92660" "#66D9EF" "#F8F8F2"])
@@ -40,7 +40,8 @@
     (cons 320 "#77504e")
     (cons 340 "#555556")
     (cons 360 "#555556")))
- '(vc-annotate-very-old-color nil))
+ '(vc-annotate-very-old-color nil)
+ '(warning-suppress-types '((frameset) (emacs) (defvaralias))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
