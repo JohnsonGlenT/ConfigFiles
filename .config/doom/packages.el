@@ -41,13 +41,17 @@
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
 (package! beacon)
+(package! lsp-jedi)
+(package! diffview)
 (package! mips-mode)
+(package! format-all)
 (package! riscv-mode)
 (package! org-sidebar)
 (package! lorem-ipsum)
 (package! ssh-tunnels)
 (package! gitlab-ci-mode)
 (package! gitlab-ci-mode-flycheck)
+(package! ue)
 
 ;(package! this-package
 ;  :recipe (:host github :repo "username/repo"

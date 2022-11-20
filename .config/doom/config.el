@@ -39,6 +39,7 @@
 ;; Enable Modes
 ;; (minimap-mode)
 (beacon-mode)
+(format-all-mode)
 
 ;; Comment Keybinds
 (map! :leader
