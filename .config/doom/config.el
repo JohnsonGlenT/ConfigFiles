@@ -52,3 +52,6 @@
       "a w" #'evil-numbers/inc-at-pt-incremental
       :desc "Decrement Number"
       "a s" #'evil-numbers/dec-at-pt-incremental)
+
+(map! :leader "s T" #'mw-thesaurus-lookup-at-point)
+(map! :leader "s t" #'dictionary-lookup-definition)

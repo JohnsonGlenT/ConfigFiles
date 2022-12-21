@@ -40,18 +40,29 @@
 ;; Use `:pin' to specify a particular commit to install.
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
-(package! beacon)
-(package! lsp-jedi)
-(package! diffview)
-(package! mips-mode)
-(package! format-all)
-(package! riscv-mode)
-(package! org-sidebar)
-(package! lorem-ipsum)
-(package! ssh-tunnels)
-(package! gitlab-ci-mode)
-(package! gitlab-ci-mode-flycheck)
 (package! ue)
+(package! jedi)
+(package! lsp-jedi)
+(package! mips-mode)
+(package! riscv-mode)
+(package! bison-mode)
+(package! format-all)
+
+(package! beacon)
+(package! diffview)
+(package! org-sidebar)
+(package! org-inline-anim)
+(package! org-roam)
+(package! org-roam-ui)
+(package! smooth-scrolling)
+(package! centered-cursor-mode)
+
+(package! ssh-tunnels)
+(package! lorem-ipsum)
+(package! le-thesaurus)
+
+(package! gitlab-ci-mode-flycheck)
+(package! gitlab-ci-mode)
 
 ;(package! this-package
 ;  :recipe (:host github :repo "username/repo"
