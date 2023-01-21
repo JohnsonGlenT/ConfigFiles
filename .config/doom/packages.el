@@ -41,12 +41,10 @@
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
 (package! ue)
-(package! jedi)
-(package! lsp-jedi)
 (package! mips-mode)
 (package! riscv-mode)
 (package! bison-mode)
-(package! format-all)
+(package! vimrc-mode)
 
 (package! beacon)
 (package! diffview)
@@ -61,8 +59,8 @@
 (package! lorem-ipsum)
 (package! le-thesaurus)
 
-(package! gitlab-ci-mode-flycheck)
 (package! gitlab-ci-mode)
+(package! gitlab-ci-mode-flycheck)
 
 ;(package! this-package
 ;  :recipe (:host github :repo "username/repo"
