@@ -46,11 +46,14 @@
       :desc "Comment Area"
       "a a" #'comment-region
       :desc "Uncomment Area"
-      "a d" #'uncomment-region
+      "a s" #'uncomment-region
       :desc "Increment Number"
       "a w" #'evil-numbers/inc-at-pt-incremental
       :desc "Decrement Number"
-      "a s" #'evil-numbers/dec-at-pt-incremental)
-
-(map! :leader "s T" #'mw-thesaurus-lookup-at-point)
-(map! :leader "s t" #'dictionary-lookup-definition)
+      "a r" #'evil-numbers/dec-at-pt-incremental
+      :desc "Launch GDB"
+      "a g" #'gdb
+      :desc "Open Dictionary"
+      "a g" #'dictionary-lookup-definition
+      :desc "Open Thesaurus"
+      "a T" #'mw-thesaurus-lookup-at-point)
