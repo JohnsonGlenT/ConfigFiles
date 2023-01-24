@@ -54,6 +54,6 @@
       :desc "Launch GDB"
       "a g" #'gdb
       :desc "Open Dictionary"
-      "a g" #'dictionary-lookup-definition
+      "a t" #'dictionary-lookup-definition
       :desc "Open Thesaurus"
       "a T" #'mw-thesaurus-lookup-at-point)
