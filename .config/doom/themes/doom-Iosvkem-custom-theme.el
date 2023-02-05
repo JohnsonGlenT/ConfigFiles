@@ -20,7 +20,7 @@
   "A dark theme inspired by VIM Iosvkem"
 
   ;; name        default   256       16
-  ((bg         '("#1b1d1e" "#1b1d1e" nil))
+  ((bg         '("#242424" "#242424" nil))
    (bg-alt     '("#262829" "#262829" nil))
    (base0      '("#1b1d1e" "#1b1d1e" "black"))
    (base1      '("#202020" "#202020" "brightblack"))
