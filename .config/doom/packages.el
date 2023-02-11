@@ -41,6 +41,8 @@
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
 (package! ue)
+(package! jedi)
+(package! lsp-jedi)
 (package! mips-mode)
 (package! riscv-mode)
 (package! bison-mode)
@@ -48,16 +50,17 @@
 
 (package! beacon)
 (package! diffview)
-(package! org-sidebar)
-(package! org-inline-anim)
 (package! org-roam)
 (package! org-roam-ui)
+(package! org-sidebar)
+(package! org-inline-anim)
 (package! smooth-scrolling)
 (package! centered-cursor-mode)
 
 (package! ssh-tunnels)
 (package! lorem-ipsum)
 (package! le-thesaurus)
+(package! helm-dictionary)
 
 (package! gitlab-ci-mode)
 (package! gitlab-ci-mode-flycheck)

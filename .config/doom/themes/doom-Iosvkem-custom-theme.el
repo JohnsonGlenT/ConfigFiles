@@ -32,7 +32,7 @@
    (base7      '("#808080" "#808080" "brightblack"))
    (base8      '("#DFDFDF" "#dfdfdf" "white"))
    (fg         '("#dddddd" "#dddddd" "white"))
-   (fg-alt     '("#5B6268" "#2d2d2d" "white"))
+   (fg-alt     '("#3f3f3f" "#3f3f3f" "white"))
 
    (grey       base4)
    (red        '("#e70a23" "#e70a23" "red"))
