@@ -9,9 +9,9 @@
       user-mail-address "Johnson.Glen.T@outlook.com")
 
 ;; Font Settings
-(setq doom-font (font-spec :family "Roboto Mono" :size 13)
-      doom-variable-pitch-font (font-spec :family "Roboto Mono" :size 12)
-      doom-big-font (font-spec :family "Roboto Mono" :size 18))
+(setq doom-font (font-spec :family "Roboto Mono" :size 16)
+      doom-variable-pitch-font (font-spec :family "Roboto Mono" :size 16)
+      doom-big-font (font-spec :family "Roboto Mono" :size 20))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -39,21 +39,29 @@
 ;; (minimap-mode)
 (beacon-mode)
 (format-all-mode)
+(indent-tabs-mode)
+(global-undo-tree-mode)
+(global-tree-sitter-mode)
 
-;; Comment Keybinds
+;; Menu Keybinds
 (map! :leader
       (:prefix-map ("a" . "Custom Binds"))
       :desc "Comment Area"
       "a a" #'comment-region
       :desc "Uncomment Area"
       "a s" #'uncomment-region
-      :desc "Increment Number"
-      "a w" #'evil-numbers/inc-at-pt-incremental
-      :desc "Decrement Number"
-      "a r" #'evil-numbers/dec-at-pt-incremental
       :desc "Launch GDB"
       "a g" #'gdb
       :desc "Open Dictionary"
       "a t" #'dictionary-lookup-definition
       :desc "Open Thesaurus"
-      "a T" #'mw-thesaurus-lookup-at-point)
+      "a T" #'mw-thesaurus-lookup-at-point
+      )
+
+;; Direct Keybinds
+(map!
+      :desc "Increment Number"
+      "C-a" #'evil-numbers/inc-at-pt-incremental
+      :desc "Decrement Number"
+      "C-s" #'evil-numbers/dec-at-pt-incremental
+      )

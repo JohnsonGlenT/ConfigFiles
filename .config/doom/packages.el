@@ -40,9 +40,6 @@
 ;; Use `:pin' to specify a particular commit to install.
 ;(package! builtin-package :pin "1a2b3c4d5e")
 
-(package! ue)
-(package! jedi)
-(package! lsp-jedi)
 (package! mips-mode)
 (package! riscv-mode)
 (package! bison-mode)
@@ -57,6 +54,7 @@
 (package! smooth-scrolling)
 (package! centered-cursor-mode)
 
+(package! undo-tree)
 (package! ssh-tunnels)
 (package! lorem-ipsum)
 (package! le-thesaurus)

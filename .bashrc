@@ -114,16 +114,18 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more aliases
-alias ll='ls -l '
-alias la='ls -A '
-alias l='ls -CF '
-alias py='python'
-alias nano='nano -S '
-alias em='emacsclient -c'
-#alias emacs='emacsclient -c'
-alias dd='dd status=progress '
 alias _='sudo '
 alias _i='sudo -i '
+alias l='ls -CF '
+alias ll='ls -l '
+alias la='ls -A '
+alias dd='dd status=progress '
+alias ec='emacsclient -c'
+alias nano='nano -S '
+alias yay='yaourtix'
+# why must I use windows at work
+alias cls='clear' 
+alias py='python'
 
 # some exports
 export RUST_SRC_PATH=/home/johnson/.rustup/toolchains/stable-x86_64-unknown-linux-gnu
