@@ -3,7 +3,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(harpoon doom-modeline-now-playing undo-tree spell-fu)))
+ '(package-selected-packages
+   '(android-env monkeytype speed-type harpoon doom-modeline-now-playing undo-tree spell-fu))
+ '(warning-suppress-types '((websocket) (defvaralias))))
  '(warning-suppress-types
    '())
 (custom-set-faces

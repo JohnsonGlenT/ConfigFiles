@@ -38,13 +38,15 @@
 ;; Enable Modes
 ;; (minimap-mode)
 (beacon-mode)
-(format-all-mode)
+;;(format-all-mode)
 (indent-tabs-mode)
+(undo-tree-mode)
 (global-undo-tree-mode)
 (global-tree-sitter-mode)
 
 ;; Menu Keybinds
 (map! :leader
+      ;; Custom Binds
       (:prefix-map ("a" . "Custom Binds"))
       :desc "Comment Area"
       "a a" #'comment-region
@@ -56,6 +58,17 @@
       "a t" #'dictionary-lookup-definition
       :desc "Open Thesaurus"
       "a T" #'mw-thesaurus-lookup-at-point
+
+      ;; Undo Tree
+      (:prefix-map ("u" . "Undo Tree"))
+      :desc "Undo Tree Visualize"
+      "u u" #'undo-tree-visualize
+      :desc "Undo Tree Visualize"
+      "u u" #'undo-tree-visualize
+
+      ;; Compile
+      :desc "lookup help (documentation)"
+      "c h"  #'+lookup/documentation
       )
 
 ;; Direct Keybinds

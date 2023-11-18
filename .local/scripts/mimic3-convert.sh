@@ -5,7 +5,7 @@ if [ $# -ne 0 ]; then
     exit
 fi
 
-MIMIC_CMD="mimic3 -v en_US/hifi-tts_low#92 --output-naming time --output-dir tmp/ --process-on-blank-line --noise-scale .72 --noise-w 1 --length-scale .9"
+MIMIC_CMD="mimic3 -v en_US/cmu-arctic_low#eey --output-naming time --output-dir tmp/ --process-on-blank-line"
 
 if [ ! -d tmp ]; then
     mkdir tmp
@@ -18,6 +18,9 @@ fi
 FILE_COUNT=$(find . -maxdepth 1 -type f -name '*.txt' | wc -l)
 
 for f in *.txt; do
+    if [[ "chapter_list.txt" == "$f" ]]; then
+        continue
+    fi
 
     BASE=$(basename -s .txt "$f")
 
