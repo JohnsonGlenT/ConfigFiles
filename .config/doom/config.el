@@ -34,12 +34,13 @@
 (setq display-line-numbers-type `relative)
 (setq-default tab-width 4)
 (setq tab-width 4)
+(setq-default indent-tabs-mode t)
+(setq indent-tabs-mode t)
 
 ;; Enable Modes
 ;; (minimap-mode)
-(beacon-mode)
 ;;(format-all-mode)
-(indent-tabs-mode)
+(beacon-mode)
 (undo-tree-mode)
 (global-undo-tree-mode)
 (global-tree-sitter-mode)
@@ -73,8 +74,8 @@
 
 ;; Direct Keybinds
 (map!
-      :desc "Increment Number"
-      "C-a" #'evil-numbers/inc-at-pt-incremental
-      :desc "Decrement Number"
-      "C-s" #'evil-numbers/dec-at-pt-incremental
-      )
+ :desc "Increment Number"
+ "C-a" #'evil-numbers/inc-at-pt-incremental
+ :desc "Decrement Number"
+ "C-s" #'evil-numbers/dec-at-pt-incremental
+ )
