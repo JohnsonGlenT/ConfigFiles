@@ -32,10 +32,14 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
+
 (setq-default tab-width 4)
 (setq tab-width 4)
+
 (setq-default indent-tabs-mode t)
 (setq indent-tabs-mode t)
+
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
 
 ;; Enable Modes
 ;; (minimap-mode)
@@ -45,10 +49,16 @@
 (global-undo-tree-mode)
 (global-tree-sitter-mode)
 
+;; Custom Functions
+(defun dired-open-marked-files()
+  "Open all marked files in another buffer"
+  (interactive)
+  (mapc 'find-file (dired-get-marked-files)))
+
 ;; Menu Keybinds
 (map! :leader
       ;; Custom Binds
-      (:prefix-map ("a" . "Custom Binds"))
+      (:prefix-map ("a" . "+Custom Binds"))
       :desc "Comment Area"
       "a a" #'comment-region
       :desc "Uncomment Area"
@@ -61,7 +71,7 @@
       "a T" #'mw-thesaurus-lookup-at-point
 
       ;; Undo Tree
-      (:prefix-map ("u" . "Undo Tree"))
+      (:prefix-map ("u" . "+Undo Tree"))
       :desc "Undo Tree Visualize"
       "u u" #'undo-tree-visualize
       :desc "Undo Tree Visualize"
@@ -70,6 +80,10 @@
       ;; Compile
       :desc "lookup help (documentation)"
       "c h"  #'+lookup/documentation
+
+      ;; Man pages
+      :desc "Launches (wo)man"
+      "o m" #'woman
       )
 
 ;; Direct Keybinds

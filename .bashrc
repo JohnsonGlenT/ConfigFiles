@@ -142,12 +142,13 @@ alias l='ls -CF '
 alias ll='ls -l '
 alias la='ls -A '
 alias dd='dd status=progress '
-alias ec='emacsclient -c'
+alias ec='emacsclient -c '
 alias nano='nano -S '
-alias yay='yaourtix'
+alias yay='yaourtix '
+alias sudo='doas '
 # why must I use windows at work
-alias cls='clear' 
-alias py='python'
+alias cls='clear ' 
+alias py='python '
 
 # some exports
 export RUST_SRC_PATH=~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu
