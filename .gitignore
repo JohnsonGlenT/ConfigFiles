@@ -3,4 +3,5 @@
 *.log
 tmp/
 
-# XFCE Files that are better managed through local settings
+# ignore neovim session files
+.config/nvim/session/

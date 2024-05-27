@@ -6,7 +6,7 @@ colorscheme PaperColor
 
 syntax on
 
-set formatoptions-=t
+set formatoptions=t
 
 set tabstop=4
 set softtabstop=4
@@ -23,6 +23,7 @@ set cursorline
 set encoding=utf-8
 set wildmenu
 
+set undofile
 set showmatch
 set hlsearch
 set incsearch
