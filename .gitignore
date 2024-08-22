@@ -5,3 +5,4 @@ tmp/
 
 # ignore neovim session files
 .config/nvim/session/
+*.~undo-tree~

@@ -42,8 +42,8 @@ proton_version="Proton - Experimental"
 
 # Path to installation directory of Steam.
 # Alternate path: "$HOME/.steam/steam"
-client_dir="/home/legio/.var/app/com.valvesoftware.Steam/.local/share/Steam/"
-#client_dir="$HOME/.local/share/Steam"
+#client_dir="/home/legio/.var/app/com.valvesoftware.Steam/.local/share/Steam/"
+client_dir="$HOME/.local/share/Steam"
 
 # Default data folder for Proton/WINE environment.  Folder must exist.
 # If the environmental variable PROTONPREFIX is set, it will overwrite env_dir.

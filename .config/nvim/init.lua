@@ -822,8 +822,8 @@ vim.keymap.set("v", "<leader>cc", "gc", { desc = "[C]ode [C]omment" })
 vim.keymap.set("n", "<leader>cc", "gcc", { desc = "[C]ode [C]omment" })
 
 -- NOTE: Window management
-vim.keymap.set("n", "<leader>wv", vim.cmd.split, { desc = "[W]indow [V]ertical" })
-vim.keymap.set("n", "<leader>wh", vim.cmd.vsplit, { desc = "[W]indow [H]orizontal" })
+vim.keymap.set("n", "<leader>wv", vim.cmd.vsplit, { desc = "[W]indow [V]ertical" })
+vim.keymap.set("n", "<leader>wh", vim.cmd.split, { desc = "[W]indow [H]orizontal" })
 vim.keymap.set("n", "<leader>wc", "<C-w>c", { desc = "[W]indow switch" })
 vim.keymap.set("n", "<leader>wC", "<C-w>o", { desc = "[W]indow switch" })
 vim.keymap.set("n", "<leader>ww", "<C-w>w", { desc = "[W]indow switch" })

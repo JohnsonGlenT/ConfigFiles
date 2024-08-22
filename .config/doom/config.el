@@ -16,11 +16,9 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-Iosvkem-custom)
-;; brighter comments are done by changing
-;; (comments        base5)
-;; in ~/.emacs.d/.local/straight/repos/themes/doom-old-hope-theme.el to
-;; (comments       (doom-lighten base6 0.2))
+(setq doom-theme 'doom-one-iosvkem)
+(setq doom-one-iosvkem-brighter-comments nil)
+(setq doom-one-iosvkem-brighter-modeline nil)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -32,6 +30,7 @@
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
+(setq scroll-margin 10)
 
 (setq-default tab-width 4)
 (setq tab-width 4)
@@ -40,6 +39,9 @@
 (setq indent-tabs-mode t)
 
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
+(setq global-undo-tree-mode t)
+(setq global-tree-sitter-mode t)
 
 ;; Enable Modes
 ;; (minimap-mode)
@@ -68,7 +70,7 @@
       :desc "Open Dictionary"
       "a t" #'dictionary-lookup-definition
       :desc "Open Thesaurus"
-      "a T" #'mw-thesaurus-lookup-at-point
+      "a T" #'powerthesaurus-lookup-dwim
 
       ;; Undo Tree
       (:prefix-map ("u" . "+Undo Tree"))

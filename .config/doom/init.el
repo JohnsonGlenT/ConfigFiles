@@ -96,10 +96,10 @@
        (eval +overlay)     ; run code, run (also, repls)
        gist              ; interacting with github gists
        (lookup              ; navigate your code and its documentation
-        +dictionary
-        +docset
-        +offline
-        )
+	+dictionary
+	+docset
+	+offline
+	)
        lsp               ; M-x vscode
        magit             ; a git porcelain for Emacs
        make              ; run make tasks from Emacs
@@ -195,5 +195,5 @@
        ;;twitter           ; twitter client https://twitter.com/vnought
 
        :config
-       ;;literate
+       literate
        (default +bindings +smartparens))
