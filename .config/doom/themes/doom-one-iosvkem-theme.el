@@ -94,15 +94,15 @@
    ;; These are the "universal syntax classes" that doom-themes establishes.
    ;; These *must* be included in every doom themes, or your theme will throw an
    ;; error, as they are used in the base theme defined in doom-themes-base.
-   (highlight      ioteal)
-   (vertical-bar   (doom-darken base2 0.1))
-   (selection      white)
+   (highlight      base5)
+   (selection      base5)
+   (vertical-bar   black)
    (builtin        magenta)
    (comments       ioteal)
    (doc-comments   ioteal)
    (constants      green)
-   (functions      magenta)
-   (keywords       blue)
+   (functions      (doom-lighten magenta 0.2))
+   (keywords       (doom-lighten blue 0.0))
    (methods        cyan)
    (operators      blue)
    (type           teal)
@@ -120,7 +120,7 @@
    ;; These are extra color variables used only in this theme; i.e. they aren't
    ;; mandatory for derived themes.
    (hidden                   `(,(car bg) "black" "black"))
-   (hl-line                  bg-alt)
+   (hl-line                  (doom-lighten bg-alt 0.1))
    (modeline-fg              fg)
    (modeline-fg-alt          base5)
    (modeline-bg              (if doom-one-iosvkem-brighter-modeline
