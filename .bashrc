@@ -144,7 +144,7 @@ alias la='ls -A '
 alias dd='dd status=progress '
 alias ec='emacsclient -c '
 alias nano='nano -S '
-alias yay='yaourtix '
+#alias yay='yaourtix '
 alias sudo='doas '
 # why must I use windows at work
 alias cls='clear ' 

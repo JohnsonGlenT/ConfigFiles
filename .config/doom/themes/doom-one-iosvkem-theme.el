@@ -78,13 +78,13 @@
    (green      '("#44c500" "#44c500" "green"))
    (teal       '("#00c968" "#00c968" "brightgreen"))
    (yellow     '("#ffed00" "#ffed00" "yellow"))
-   (blue       '("#118def" "#118def" "brightblue"))
+   (blue       '("#00bfff" "#00bfff" "brightblue"))
    (dark-blue  '("#002ab2" "#002ab2" "blue"))
    (magenta    '("#d517c0" "#d517c0" "magenta"))
    (violet     '("#d80ff3" "#d80ff3" "brightmagenta"))
-   (cyan       '("#30e7ba" "#30e7ba" "brightcyan"))
+   (cyan       '("#5cacee" "#5cacee" "brightcyan"))
    (dark-cyan  '("#0082ba" "#0082ba" "cyan"))
-   (urlblue    '("#034cda" "#034cda" "blue"))
+   (urlblue    '("#00bfff" "#00bfff" "blue"))
    (iolime     '("#9ffc20" "#9ffc20" "green"))
    (iopurple   '("#bb20fc" "#bb20fc" "magenta"))
    (iocyan     '("#11dbed" "#11dbed" "cyan"))
@@ -99,7 +99,7 @@
    (vertical-bar   black)
    (builtin        magenta)
    (comments       ioteal)
-   (doc-comments   ioteal)
+   (doc-comments   (doom-darken ioteal 0.1))
    (constants      green)
    (functions      (doom-lighten magenta 0.2))
    (keywords       (doom-lighten blue 0.0))
@@ -120,7 +120,7 @@
    ;; These are extra color variables used only in this theme; i.e. they aren't
    ;; mandatory for derived themes.
    (hidden                   `(,(car bg) "black" "black"))
-   (hl-line                  (doom-lighten bg-alt 0.1))
+   (hl-line                  (doom-lighten bg-alt 0.05))
    (modeline-fg              fg)
    (modeline-fg-alt          base5)
    (modeline-bg              (if doom-one-iosvkem-brighter-modeline
@@ -138,9 +138,10 @@
     (when doom-one-iosvkem-padded-modeline
       (if (integerp doom-one-iosvkem-padded-modeline) doom-one-iosvkem-padded-modeline 4))))
 
-
   ;;;; Base theme face overrides
-  (((line-number &override) :foreground base4)
+  ((cursor :background (doom-lighten violet 0.2))
+   ((line-number-current-line &override) :foreground base7 :distant-foreground 'unspecified)
+   ((line-number &override) :foreground base6)
    ((line-number-current-line &override) :foreground fg)
    (hl-line :background hl-line :foreground nil)
    ((font-lock-comment-face &override)
@@ -160,9 +161,9 @@
    ;;;; doom-modeline
    (doom-modeline-bar :background (if doom-one-iosvkem-brighter-modeline modeline-bg highlight))
    (doom-modeline-bar :background  highlight)
+   (doom-modeline-project-dir :weight 'bold :foreground green)
+   (doom-modeline-buffer-path :inherit 'mode-line-emphasis :weight 'bold :foreground (doom-lighten orange 0.15))
    (doom-modeline-buffer-file :inherit 'mode-line-buffer-id :weight 'bold)
-   (doom-modeline-buffer-path :inherit 'mode-line-emphasis :weight 'bold)
-   (doom-modeline-buffer-project-root :foreground green :weight 'bold)
    ;;;; elscreen
    (elscreen-tab-other-screen-face :background "#353a42" :foreground "#1e2022")
    ;;;; ivy
@@ -184,7 +185,25 @@
    (solaire-mode-line-inactive-face
     :inherit 'mode-line-inactive
     :background modeline-bg-inactive-alt
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-alt))))
+    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,modeline-bg-inactive-alt)))
+   ;;;; outline
+   ((outline-1 &override) :foreground blue)
+   ((outline-2 &override) :foreground orange)
+   ((outline-3 &override) :foreground teal)
+   ((outline-4 &override) :foreground magenta)
+   ((outline-5 &override) :foreground blue)
+   ((outline-6 &override) :foreground orange)
+   ((outline-7 &override) :foreground teal)
+   ((outline-8 &override) :foreground magenta)
+   ;;;; org <built-in>
+   (org-hide :foreground hidden)
+   (org-link :foreground urlblue :underline t)
+   ((org-quote &override) :background bg-alt)
+   ((org-block &override) :background bg-alt)
+   ((org-block-begin-line &override) :foreground comments :background bg)
+   ((org-list-dt &override) :foreground ioteal)
+   ((org-document-info-keyword &override) :foreground orange :background bg)
+   )
 
   ;;;; Base theme variable overrides-
   ())

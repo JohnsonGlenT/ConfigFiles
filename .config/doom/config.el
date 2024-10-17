@@ -20,12 +20,25 @@
 (setq doom-one-iosvkem-brighter-comments nil)
 (setq doom-one-iosvkem-brighter-modeline nil)
 
+;; Fix Link Coloring
+(set-face-foreground 'link "#Db7093")
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/Org/")
 
 ;; Set Ispell Dictionary
 (setq ispell-dictionary "en")
+
+;; auto save file changes
+(setq auto-save-default t
+      make-backup-files t)
+
+;; everything is a project
+(use-package projectile
+  :ensure t
+  :init
+    (projectile-mode 1))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -40,8 +53,7 @@
 
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
 
-(setq global-undo-tree-mode t)
-(setq global-tree-sitter-mode t)
+;; Enable Modes
 
 ;; Enable Modes
 ;; (minimap-mode)
@@ -50,6 +62,9 @@
 (undo-tree-mode)
 (global-undo-tree-mode)
 (global-tree-sitter-mode)
+
+(setq global-undo-tree-mode t)
+(setq global-tree-sitter-mode t)
 
 ;; Custom Functions
 (defun dired-open-marked-files()
@@ -95,3 +110,11 @@
  :desc "Decrement Number"
  "C-s" #'evil-numbers/dec-at-pt-incremental
  )
+
+;; Insert Mode Keybinds
+(map! :desc "select" :i "C-y" #'company-complete-selection)
+
+;; Disable Default Keybinds
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "<return>") nil)
+  (define-key company-active-map (kbd "RET") nil))
