@@ -34,12 +34,6 @@
 (setq auto-save-default t
       make-backup-files t)
 
-;; everything is a project
-(use-package projectile
-  :ensure t
-  :init
-    (projectile-mode 1))
-
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
