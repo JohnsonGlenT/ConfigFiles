@@ -10,7 +10,7 @@ esac
 
 PROMPT_DIRTRIM=3
 export PATH=PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:~/.local/bin
-export EDITOR=vim
+export EDITOR=nvim
 
 # Import Secrets Variables
 SECRETS=~/.bash_secrets
@@ -134,21 +134,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto '
     alias egrep='egrep --color=auto '
 fi
-
-# some more aliases
-alias _='sudo '
-alias _i='sudo -i '
-alias l='ls -CF '
-alias ll='ls -l '
-alias la='ls -A '
-alias dd='dd status=progress '
-alias ec='emacsclient -c '
-alias nano='nano -S '
-#alias yay='yaourtix '
-alias sudo='doas '
-# why must I use windows at work
-alias cls='clear ' 
-alias py='python '
 
 # some exports
 export RUST_SRC_PATH=~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu

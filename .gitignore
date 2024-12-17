@@ -2,6 +2,7 @@
 .idea
 *.log
 tmp/
+.local/scripts/.mypy_cache/*
 
 # ignore doom emacs files
 *.~undo-tree~
