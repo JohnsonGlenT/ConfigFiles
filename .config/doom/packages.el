@@ -59,7 +59,9 @@
 (package! lorem-ipsum)
 (package! le-thesaurus)
 (package! helm-dictionary)
+(package! license-templates)
 
+(package! gitlab)
 (package! gitlab-ci-mode)
 (package! gitlab-ci-mode-flycheck)
 

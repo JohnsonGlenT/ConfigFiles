@@ -15,8 +15,9 @@ alias nano='nano -S '
 
 # Arch specific aliases
 if [ -f "/bin/pacman" ]; then
-	#alias yay='yaourtix '
+	alias yay='yay --sudoloop '
 	alias paru='paru --fm $EDITOR '
+
 fi
 
 # Package Dependant

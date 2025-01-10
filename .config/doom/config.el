@@ -1,8 +1,5 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Glen Johnson"
@@ -27,6 +24,17 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/Org/")
 
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type `relative)
+(setq scroll-margin 10)
+
+(setq indent-tabs-mode t)
+(setq-default indent-tabs-mode t)
+
+(setq tab-width 4)
+(setq-default tab-width 4)
+
 ;; Set Ispell Dictionary
 (setq ispell-dictionary "en")
 
@@ -34,24 +42,11 @@
 (setq auto-save-default t
       make-backup-files t)
 
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type `relative)
-(setq scroll-margin 10)
-
-(setq-default tab-width 4)
-(setq tab-width 4)
-
-(setq-default indent-tabs-mode t)
-(setq indent-tabs-mode t)
-
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
 
 ;; Enable Modes
-
-;; Enable Modes
 ;; (minimap-mode)
-;;(format-all-mode)
+;; (format-all-mode)
 (beacon-mode)
 (undo-tree-mode)
 (global-undo-tree-mode)
@@ -60,13 +55,9 @@
 (setq global-undo-tree-mode t)
 (setq global-tree-sitter-mode t)
 
-;; Custom Functions
-(defun dired-open-marked-files()
-  "Open all marked files in another buffer"
-  (interactive)
-  (mapc 'find-file (dired-get-marked-files)))
+(setq-default undo-tree-mode t)
+(setq-default global-tree-sitter-mode t)
 
-;; Menu Keybinds
 (map! :leader
       ;; Custom Binds
       (:prefix-map ("a" . "+Custom Binds"))
@@ -112,3 +103,8 @@
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "<return>") nil)
   (define-key company-active-map (kbd "RET") nil))
+
+(defun dired-open-marked-files()
+  "Open all marked files in another buffer"
+  (interactive)
+  (mapc 'find-file (dired-get-marked-files)))
