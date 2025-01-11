@@ -84,8 +84,8 @@
       "c h"  #'+lookup/documentation
 
       ;; Man pages
-      :desc "Launches (wo)man"
-      "o m" #'woman
+      :desc "Launches wo(man)"
+      "o w" #'woman
       )
 
 ;; Direct Keybinds
@@ -103,6 +103,9 @@
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "<return>") nil)
   (define-key company-active-map (kbd "RET") nil))
+
+(setq projectile-require-project-root nil)
+(setq-default projectile-require-project-root nil)
 
 (defun dired-open-marked-files()
   "Open all marked files in another buffer"

@@ -104,8 +104,8 @@ You do not need to run 'doom sync' after modifying this file!
       "c h"  #'+lookup/documentation
 
       ;; Man pages
-      :desc "Launches (wo)man"
-      "o m" #'woman
+      :desc "Launches wo(man)"
+      "o w" #'woman
       )
 
 ;; Direct Keybinds
@@ -123,6 +123,11 @@ You do not need to run 'doom sync' after modifying this file!
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "<return>") nil)
   (define-key company-active-map (kbd "RET") nil))
+#+end_src
+** Projectile Config
+#+begin_src elisp :tangle config.el
+(setq projectile-require-project-root nil)
+(setq-default projectile-require-project-root nil)
 #+end_src
 ** Custom Functions
 #+begin_src elisp :tangle config.el
